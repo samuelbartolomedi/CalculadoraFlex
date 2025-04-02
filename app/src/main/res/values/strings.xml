@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CalculadoraFlex</string>
+    <string name="calcular">Calcular</string>
+    <string name="ValorLitroCombustivel2">Valor por litro combustível 2:</string>
+    <string name="ValorPorLitroCombustivel1">Valor por litro combustível 1:</string>
+    <string name="AutonomiaCombustivel1">Autonomia combustível 1:</string>
+    <string name="AutonomiaCombustivel2">Autonomia combustível 2:</string>
+    <string name="buscar">Buscar</string>
+</resources>

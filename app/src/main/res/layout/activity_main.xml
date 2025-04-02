@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AutonomiaCombustivel1" />
+
+    <EditText
+        android:id="@+id/etAutonomiaCombustivel1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789."
+        android:inputType="numberDecimal"
+        android:maxLength="4" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btBuscarCombustivel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btBuscarOnClick"
+            android:text="@string/buscar" />
+
+        <TextView
+            android:id="@+id/tvCombustivelSelecionado1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AutonomiaCombustivel2" />
+
+    <EditText
+        android:id="@+id/etAutonomiaCombustivel2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789."
+        android:inputType="numberDecimal"
+        android:maxLength="4" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btBuscarCombustivel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btBuscarOnClick"
+            android:text="@string/buscar" />
+
+        <TextView
+            android:id="@+id/tvCombustivelSelecionado2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ValorPorLitroCombustivel1" />
+
+    <EditText
+        android:id="@+id/etValorLitroCombustivel1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789."
+        android:inputType="numberDecimal"
+        android:maxLength="4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ValorLitroCombustivel2" />
+
+    <EditText
+        android:id="@+id/etValorLitroCombustivel2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789."
+        android:inputType="numberDecimal"
+        android:maxLength="4" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btCalcularOnClick"
+            android:text="@string/calcular" />
+
+        <TextView
+            android:id="@+id/tvCombustivelEficiente"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </LinearLayout>
+</LinearLayout>
