@@ -6,4 +6,7 @@
     <string name="AutonomiaCombustivel1">Autonomia combustível 1:</string>
     <string name="AutonomiaCombustivel2">Autonomia combustível 2:</string>
     <string name="buscar">Buscar</string>
+    <string name="autonomia_combustivel">Insira autonomia do combustível!</string>
+    <string name="km_l">KM/L</string>
+    <string name="rs_l">R$/L</string>
 </resources>

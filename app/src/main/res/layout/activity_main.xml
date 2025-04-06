@@ -1,118 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvAutonomiaCombustivel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/AutonomiaCombustivel1" />
+        android:layout_marginTop="12dp"
+        android:text="@string/AutonomiaCombustivel1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etAutonomiaCombustivel1"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:digits="0123456789."
+        android:hint="@string/km_l"
         android:inputType="numberDecimal"
-        android:maxLength="4" />
+        android:maxLength="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAutonomiaCombustivel1"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <Button
+        android:id="@+id/btBuscarCombustivel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btBuscarCombustivel1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="btBuscarOnClick"
-            android:text="@string/buscar" />
-
-        <TextView
-            android:id="@+id/tvCombustivelSelecionado1"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </LinearLayout>
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="4dp"
+        android:onClick="btBuscarOnClick"
+        android:text="@string/buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvCombustivelSelecionado1"
+        app:layout_constraintTop_toBottomOf="@+id/etAutonomiaCombustivel1" />
 
     <TextView
+        android:id="@+id/tvCombustivelSelecionado1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAutonomiaCombustivel1" />
+
+    <TextView
+        android:id="@+id/tvAutonomiaCombustivel2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/AutonomiaCombustivel2" />
+        android:layout_marginTop="52dp"
+        android:text="@string/AutonomiaCombustivel2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCombustivelSelecionado1" />
 
     <EditText
         android:id="@+id/etAutonomiaCombustivel2"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:digits="0123456789."
+        android:hint="@string/km_l"
         android:inputType="numberDecimal"
-        android:maxLength="4" />
+        android:maxLength="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAutonomiaCombustivel2"
+        app:layout_constraintTop_toBottomOf="@+id/btBuscarCombustivel1" />
 
-    <LinearLayout
+    <Button
+        android:id="@+id/btBuscarCombustivel2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btBuscarCombustivel2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="btBuscarOnClick"
-            android:text="@string/buscar" />
-
-        <TextView
-            android:id="@+id/tvCombustivelSelecionado2"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </LinearLayout>
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="20dp"
+        android:onClick="btBuscarOnClick"
+        android:text="@string/buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvCombustivelSelecionado2"
+        app:layout_constraintTop_toBottomOf="@+id/etAutonomiaCombustivel2" />
 
     <TextView
+        android:id="@+id/tvCombustivelSelecionado2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAutonomiaCombustivel2" />
+
+    <TextView
+        android:id="@+id/tvValorLitroCombustivel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ValorPorLitroCombustivel1" />
+        android:layout_marginTop="56dp"
+        android:text="@string/ValorPorLitroCombustivel1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCombustivelSelecionado2" />
 
     <EditText
         android:id="@+id/etValorLitroCombustivel1"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:digits="0123456789."
+        android:hint="@string/rs_l"
         android:inputType="numberDecimal"
-        android:maxLength="4" />
+        android:maxLength="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/tvValorLitroCombustivel1"
+        app:layout_constraintTop_toBottomOf="@+id/btBuscarCombustivel2" />
 
     <TextView
+        android:id="@+id/tvValorLitroCombustivel2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ValorLitroCombustivel2" />
+        android:layout_marginTop="48dp"
+        android:text="@string/ValorLitroCombustivel2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValorLitroCombustivel1" />
 
     <EditText
         android:id="@+id/etValorLitroCombustivel2"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:digits="0123456789."
+        android:hint="@string/rs_l"
         android:inputType="numberDecimal"
-        android:maxLength="4" />
+        android:maxLength="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toEndOf="@+id/tvValorLitroCombustivel2"
+        app:layout_constraintTop_toBottomOf="@+id/etValorLitroCombustivel1" />
 
-    <LinearLayout
+    <Button
+        android:id="@+id/btCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="8dp"
+        android:onClick="btCalcularOnClick"
+        android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValorLitroCombustivel2" />
 
-        <Button
-            android:id="@+id/btCalcular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="btCalcularOnClick"
-            android:text="@string/calcular" />
-
-        <TextView
-            android:id="@+id/tvCombustivelEficiente"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </LinearLayout>
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvCombustivelEficiente"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/btCalcular"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValorLitroCombustivel2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

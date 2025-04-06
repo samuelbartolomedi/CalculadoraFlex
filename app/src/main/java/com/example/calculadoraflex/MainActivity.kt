@@ -61,7 +61,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun btCalcularOnClick(view: View) {
+    /*
+    implementar uma classe para evitar repetições?
+     */
+    private fun calcularValorGastoCombustivel(){
         val autonomiaCombustivel1 = etAutonomiaCombustivel1.text.toString().toDouble()
         val combustivelSelecionado1 = tvCombustivelSelecionado1.text
         val valorLitroCombustivel1 = etValorLitroCombustivel1.text.toString().toDouble()
@@ -75,5 +78,9 @@ class MainActivity : AppCompatActivity() {
         } else {
             tvCombustivelEficiente.setText("Abasteça com $combustivelSelecionado2")
         }
+    }
+
+    fun btCalcularOnClick(view: View) {
+       calcularValorGastoCombustivel()
     }
 }
