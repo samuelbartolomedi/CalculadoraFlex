@@ -68,15 +68,17 @@ class MainActivity : AppCompatActivity() {
         val autonomiaCombustivel1 = etAutonomiaCombustivel1.text.toString().toDouble()
         val combustivelSelecionado1 = tvCombustivelSelecionado1.text
         val valorLitroCombustivel1 = etValorLitroCombustivel1.text.toString().toDouble()
-        val valorPorQuilometroCombustivel1 = autonomiaCombustivel1 / valorLitroCombustivel1;
+        val custoPorKmCombustivel1 = valorLitroCombustivel1 / autonomiaCombustivel1
+
         val autonomiaCombustivel2 = etAutonomiaCombustivel2.text.toString().toDouble()
         val combustivelSelecionado2 = tvCombustivelSelecionado2.text
         val valorLitroCombustivel2 = etValorLitroCombustivel2.text.toString().toDouble()
-        val valorPorQuilometroCombustivel2 = autonomiaCombustivel2 / valorLitroCombustivel2;
-        if (valorPorQuilometroCombustivel1 < valorPorQuilometroCombustivel2) {
-            tvCombustivelEficiente.setText("Abasteça com $combustivelSelecionado1")
+        val custoPorKmCombustivel2 = valorLitroCombustivel2 / autonomiaCombustivel2
+
+        if (custoPorKmCombustivel1 < custoPorKmCombustivel2) {
+            tvCombustivelEficiente.text = "Abasteça com $combustivelSelecionado1"
         } else {
-            tvCombustivelEficiente.setText("Abasteça com $combustivelSelecionado2")
+            tvCombustivelEficiente.text = "Abasteça com $combustivelSelecionado2"
         }
     }
 
